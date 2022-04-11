@@ -9,8 +9,10 @@ h1 {
 }
 .grid-layout {
   display:grid; 
- grid-template-columns:  50% 20% auto ;
- grid-template-rows: 200px auto auto;
+ /* grid-template-columns:  50% 20% auto ; */
+ grid-template-columns:  auto auto auto ;
+ /* grid-template-rows: 200px auto auto; */
+ grid-template-rows: auto ;
  /* justify-content:  flex-start; */
  /* justify-content:  center; */
  /* justify-content:  space-between; */
@@ -28,4 +30,16 @@ h1 {
   text-align: center;
   line-height: 150px;
 
+}
+
+.c1 {
+  /* cuantas columnas ocupe el elemento c1 dentro del grid  contando las lineas*/
+
+  /* desde la linea uno a la linea 4 */
+  grid-column: 1/ 4;
+  /* grid-column: 1/span 4; */
+  /* background-color: lightskyblue; */
+}
+.c2 {
+  grid-column: 1/3;
 }
