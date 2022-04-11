@@ -1,0 +1,27 @@
+body {
+  background-color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+  text-align: center;
+}
+.grid-layout {
+  width: 80%;
+  margin: 0 auto;
+  background-color: lightgreen;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.caja {
+  background-color: lightgray;
+  border: 1px black solid;  
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  text-align: center;
+  line-height: 150px;
+  float: left
+}
