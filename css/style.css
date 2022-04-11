@@ -1,45 +1,115 @@
-body {
-  background-color: antiquewhite;
-  font-family: Arial, Helvetica, sans-serif;
-
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: 'Digital';
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+      format('svg');
 }
 
-h1 {
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding:0;
+  margin: 0;
+}
+
+.header {
+  margin-top: 15px;
+  width: 100%;
+  position: absolute;
   text-align: center;
-}
-.grid-layout {
-  display:grid; 
- /* grid-template-columns:  50% 20% auto ; */
- grid-template-columns:  auto auto auto ;
- /* grid-template-rows: 200px auto auto; */
- grid-template-rows: auto ;
- /* justify-content:  flex-start; */
- /* justify-content:  center; */
- /* justify-content:  space-between; */
- justify-content:  stretch;
-  width: 80%;
-  margin: 0 auto;
-  background-color: lightgreen;
-  padding: 20px;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;  
 }
 
-.caja {
-  background-color: lightgray;
-  border: 4px black solid;  
-  text-align: center;
-  line-height: 150px;
-
+main    {
+  background-color: #c2c2d6;
+  height: 100vh;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.c1 {
-  /* cuantas columnas ocupe el elemento c1 dentro del grid  contando las lineas*/
+main > .section   {
+   background-color: rgb(0, 0, 0);
+  color:white;
+  width: 320px; 
+  padding: 5px; 
+  border:2px solid #47476b
+}
 
-  /* desde la linea uno a la linea 4 */
-  grid-column: 1/ 4;
-  /* grid-column: 1/span 4; */
-  /* background-color: lightskyblue; */
+main .section  .container {
+  color:white;
+  background-color: rgb(0, 0, 0);
+   display: grid; 
+  grid-template-columns: repeat(4,1fr);  
 }
-.c2 {
-  grid-column: 1/3;
+
+main > .section > .container > button{
+  /* position: relative; */
+  border: none;
+  outline: 1px solid black;
+  cursor: pointer;
+  font-family: Share Tech Mono, monospace;
+  background: #4d4d4d;
+  color: white;
 }
+
+main > .section > .container > button:hover {
+  color: black;
+  outline: 0.05em solid grey;
+  z-index: 3;
+}
+
+/*First element of grid span 4 columsn*/
+ main  .section  .container *:first-child{
+  grid-column: 1 / span 4;
+  padding: 1px;
+  text-align: end;
+  font-size: 20px;
+  color: orange;
+  line-height: 20px;
+  word-wrap: break-word;
+  font-family: digital;
+}
+
+main  .section  .container *:nth-child(2){
+  grid-column: 1 / span 4;
+  text-align: end;
+  font-size: 29px;
+  font-family: digital;
+  color: white;
+  line-height: 35px;
+}
+
+main > .section > .container >*:nth-child(3){
+  grid-column: 1 / span 2;
+  background-color: rgb(172, 57, 57);
+}
+
+main > .section > .container > *:nth-child(17) {
+   grid-row: 6 / span 2;
+   grid-column: 4 ;
+   background: rgb(0, 68, 102); 
+}
+
+main > .section > .container >*:nth-child(18){
+   grid-column: 1 / span 2;
+}
+
+#divide, #multiply,#subtract,#add {
+  background: rgb(102, 102, 102);
+}
+
+.squard {
+  position: relative;
+  height: 65px; 
+}  
+
