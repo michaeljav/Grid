@@ -38,8 +38,7 @@ main    {
 }
 
 main > .section   {
-   background-color: rgb(0, 0, 0);
-  color:white;
+   background-color: rgb(0, 0, 0);  
   width: 320px; 
   padding: 5px; 
   border:2px solid #47476b
